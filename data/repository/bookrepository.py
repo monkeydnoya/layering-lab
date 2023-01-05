@@ -45,7 +45,7 @@ async def updateBook(isbn, book):
     return document
 
 
-async def delete_order(order):
-    await collection.delete_one({"orderTitle": order})
+async def deleteBook(isbn):
+    await collection.delete_one({"isbn": isbn})
 
     return True
